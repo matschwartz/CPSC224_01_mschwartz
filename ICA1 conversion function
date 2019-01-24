@@ -1,0 +1,57 @@
+public class ICA1_Conversion_Function()
+{
+  public static void conversion(String [] args)
+  {
+      Scanner scan = new Scanner(System.in);
+      int userInt, menuChoice;
+      bool quit = false;
+      
+      System.out.print("Enter a distance in meters: ");
+      userInt = scan.nextInt();
+      
+      while(!quit)
+      {
+          showMenu();
+          menuChoice = scan.nextInt();
+          if (menuChoice == 1)
+            showKilometers(userInt);
+          else if ( menuChoice == 2)
+            showInches(userInt);
+          else if (menuChoice == 3)
+             showFeet(userInt);
+      }
+  }
+  
+  public static void showKilometers(int num)
+  {
+      double convertedNum;
+      convertedNum = num*0.001;
+      System.out.print(num + " meters is " + convertedNum + " kilometers);
+  }
+  
+  public static void showInches (int num)
+  {
+      double convertedNum;
+      convertedNum = num*39.37;
+      System.out.print(num + " meters is " + convertedNum + " inches);
+  }
+  
+  public static void showFeet(int num)
+  {
+      double convertedNum;
+      convertedNum = num*3.281;
+      System.out.print(num + " meters is " + convertedNum + " feet);
+  }
+  
+  public static void showMenu()
+  {
+      System.out.println("1. Convert to kilometers");
+      System.out.println("2. Convert to inches");
+      System.out.println("3. Convert to feet");
+      System.out.println("4. Quit the program");
+  }
+}
+
+
+
+
