@@ -1,0 +1,36 @@
+public static void Pet()
+{
+    private String name;
+    private String animal;
+    private int age;
+    
+}
+public static void setName(String newName)
+{
+    name= newName;
+}
+
+public static void setAnimal(String newAnimal)
+{
+    animal= newAnimal;
+}
+
+public static void  setAge(int newAge)
+{
+    age = newAge;
+}
+
+public static String getName()
+{
+    return name;
+}
+
+public static String getAnimal()
+{
+    return animal;
+}
+
+public static int getAge()
+{
+    return age;
+}
