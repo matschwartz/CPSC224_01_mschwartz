@@ -7,12 +7,12 @@ public static void Pet()
 }
 public static void setName(String newName)
 {
-    name= newName;
+    name = newName;
 }
 
 public static void setAnimal(String newAnimal)
 {
-    animal= newAnimal;
+    animal = newAnimal;
 }
 
 public static void  setAge(int newAge)
@@ -34,3 +34,34 @@ public static int getAge()
 {
     return age;
 }
+
+public static void main(String[] args)
+{
+    Scanner scan = new Scanner (System.in);
+    Pet dog;
+    String temp;
+    int age;
+    
+    System.out.println("Enter the name of the animal: ");
+    temp = scan.nextline();
+    dog.setName(temp);
+    
+    System.out.println("Enter the tyoe of the animal: ");
+    temp = scan.nextline();
+    dog.setAnimal(temp);
+    
+    System.out.println("Enter the age of the animal: ");
+    age = scan.nextInt();
+    dog.setAge(age);
+    
+    System.out.println("The " + dog.getAnimal() + " named " + dog.getName()
+                       + " is " dog.getAge() + " years old.");
+}
+
+
+
+
+
+
+
+
