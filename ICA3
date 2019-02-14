@@ -1,0 +1,40 @@
+import javax.swing.*;
+
+public class LatinTranslator extends JFrame
+{
+   private JPanel panel;            
+   private JLabel messageLabel; 
+   private JButton sinisterButton;       // To reference a button
+   private JButton dexterButton;       // To reference a button
+   private JButton mediumButton;       // To reference a button
+   private final int WINDOW_WIDTH = 310;  // Window width
+   private final int WINDOW_HEIGHT = 100; // Window height
+   
+   public LatinTranslator()
+   {
+        setTitle("Latin Translator");
+        setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        buildPanel();
+        add(panel);
+        setVisible(true);
+   }
+   
+   private void buildPanel()
+   {
+         messageLabel = new JLabel("Choose which word you would like to translate");
+         sinisterButton = new JButton("Sinister");
+         dexterButton = new JButton("Dexter");
+         mediumButton = new JButton("Medium");
+         panel = new JPanel();
+         panel.add(messageLabel);
+         panel.add(sinisterButton);
+         panel.add(dexterButton);
+         panel.add(mediumButton);
+   }
+   
+   public static void main(String[] args)
+   {
+      new LatinTranslator();
+   }
+}
