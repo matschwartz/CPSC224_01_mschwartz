@@ -1,0 +1,71 @@
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.util.Random;
+
+pubic class Dice extends JFrame
+{
+  private JPanel panel;
+  private JLabel die1;
+  private JLabel die2;
+  private JButton rollDice;
+  
+  public Dice()
+  {
+    setTitle("Die Simulator");
+    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    setLayout(new BorderLayout());
+    buildImagePanel();
+    buildButtonPanel();
+    
+    add(imagePanel, BorderLayout.CENTER);
+    add(buttonPanel, BorderLayout.SOUTH);
+     
+    pack();
+    setVisable(true);
+  }
+  
+  private void buildImagePanel()
+  {
+     imagePanel = new JPanel();
+     imagePanel.add(die1);
+     imagePanel.add(die2);
+  }
+  
+  private void buildButtonPanel()
+  {
+    buttonPanel= new JPanel();
+    button = new JButton("Roll the Dice");
+    button.addActionListener(new ButtonListener());
+    buttonPanel.add(button);
+  }
+  
+  private class ButtonListener(ActionEvent e)
+  {
+    public void actionPerformed(ActionEvent e)
+    {
+      Random rand1 = new Random();
+      Random rand2 = new Random();
+      dieOne = dieNum(rand1);
+      dieTwo = dieNum(rand2);
+      die1.setIcon(dieOne);
+      die2.setIcon(dieTwo);
+      die1.setText(null);
+      die2.setText(null);
+      pack();
+    }
+    
+    public JLabel dieNum(int num)
+    {
+         JLabel image;
+         // make a case statement for dieOne and dieTwo and run for each die
+         return image;
+    }
+  }
+  
+  public static void main (String[] args)
+  {
+    new Dice();
+  }
+}
